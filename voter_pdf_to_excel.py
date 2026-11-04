@@ -21,13 +21,16 @@ if sys.platform == "win32":
 
 # =============================================================================
 # USER CONFIGURATION SECTION
-# Change the PDF_PATH or OUTPUT settings below as required.
+# PDF_PATH me apni PDF file ka path dalein.
+# OUTPUT_FILENAME: Agar None rakhenge to automatic PDF ke naam se Excel banegi!
+# Example: "JAINAGAR-Ward No-009.pdf" -> "JAINAGAR-Ward No-009.xlsx"
 # =============================================================================
 PDF_PATH = r"JAINAGAR-Ward No-009.pdf"
 
 OUTPUT_FOLDER = r".\output"
 
-OUTPUT_FILENAME = "Voter_List_Extracted.xlsx"
+# None rakhne par PDF ke exact naam se Excel file banegi
+OUTPUT_FILENAME = None
 
 OCR_LANGUAGE = "hin+eng"
 
@@ -74,7 +77,7 @@ def setup_logging(output_dir: str):
 
 def process_voter_pdf(pdf_path: str,
                       output_folder: str,
-                      output_filename: str,
+                      output_filename: str = None,
                       dpi: int = 300,
                       enable_ocr: bool = True,
                       enable_text: bool = True,
@@ -83,10 +86,16 @@ def process_voter_pdf(pdf_path: str,
     start_time = time.time()
     pdf_filename = os.path.basename(pdf_path)
 
+    # Automatic Excel filename based on PDF filename if not explicitly provided
+    if not output_filename:
+        pdf_stem = os.path.splitext(pdf_filename)[0]
+        output_filename = f"{pdf_stem}.xlsx"
+
     print("=" * 44)
     print("      VOTER PDF TO EXCEL EXTRACTOR")
     print("=" * 44)
-    print(f"\nPDF: {pdf_filename}\n")
+    print(f"\nPDF: {pdf_filename}")
+    print(f"Target Excel: {output_filename}\n")
 
     os.makedirs(output_folder, exist_ok=True)
     log_file = setup_logging(output_folder)

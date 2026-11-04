@@ -130,13 +130,16 @@ Open `voter_pdf_to_excel.py` in any text editor. At the very top, modify the con
 ```python
 # =============================================================================
 # USER CONFIGURATION SECTION
-# Change the PDF_PATH or OUTPUT settings below as required.
+# PDF_PATH me apni PDF file ka path dalein.
+# OUTPUT_FILENAME: None rakhne par automatic PDF ke naam se Excel file banegi!
+# Example: "JAINAGAR-Ward No-009.pdf" -> "JAINAGAR-Ward No-009.xlsx"
 # =============================================================================
 PDF_PATH = r"D:\VoterList\JAINAGAR-Ward No-009.pdf"
 
 OUTPUT_FOLDER = r".\output"
 
-OUTPUT_FILENAME = "Voter_List_Extracted.xlsx"
+# None rakhne par PDF ke exact naam se Excel file banegi
+OUTPUT_FILENAME = None
 
 OCR_LANGUAGE = "hin+eng"
 
