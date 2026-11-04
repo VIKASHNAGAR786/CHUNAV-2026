@@ -66,11 +66,14 @@ def create_schema(conn: sqlite3.Connection):
         id INTEGER PRIMARY KEY,
         name_hindi TEXT,
         name_english TEXT,
+        mentor_hindi TEXT,
+        mentor_english TEXT,
         role TEXT,
         slogan TEXT,
         phone TEXT,
         whatsapp TEXT,
         office_address TEXT,
+        nivedak TEXT,
         manifesto TEXT
     );
     """)
@@ -104,27 +107,30 @@ def populate_candidate_info(conn: sqlite3.Connection):
     cursor.execute("DELETE FROM candidate_info;")
 
     manifesto = """
-1. स्वच्छ पेयजल एवं हर घर नल-जल योजना का शत-प्रतिशत क्रियान्वयन।
-2. ग्राम पंचायत जैनगर के सभी 9 वार्डों में पक्की सीसी सड़कें एवं व्यवस्थित नालियाँ।
-3. प्राथमिक व माध्यमिक विद्यालयों में बेहतर शिक्षा व डिजिटल क्लासरूम सुविधा।
-4. प्राथमिक स्वास्थ्य केंद्र में 24x7 बुनियादी दवाइयां व एम्बुलेंस सेवा की सुगमता।
-5. युवाओं के लिए खेल मैदान, ओपन जिम व प्रतियोगी परीक्षाओं हेतु मार्गदर्शन केंद्र।
-6. किसान कल्याण: खाद-बीज की सुगम उपलब्धता व सिंचाई तंत्र का विस्तार।
-7. पारदर्शी व जनहितैषी पंचायत प्रशासन: ग्रामवासियों के कार्यों का त्वरित निस्तारण।
+1. स्वच्छ पेयजल: हांपाहेड़ी, भौराजेड़ी, जयनगर व गोविन्दपुरा में हर घर नल-जल योजना का सुदृढ़ीकरण।
+2. पक्की सड़कें: सभी 9 वार्डों की गलियों में सीमेंटेड सीसी सड़कें व व्यवस्थित ढकी नालियाँ।
+3. आधुनिक शिक्षा: सरकारी विद्यालयों में स्मार्ट क्लासरूम, खेल सामग्री व लाइब्रेरी सुविधा।
+4. 24x7 स्वास्थ्य सेवा: उप-स्वास्थ्य केंद्र पर निरंतर प्राथमिक उपचार, आवश्यक दवाइयां व एम्बुलेंस।
+5. युवा व किसान: खेल मैदान का जीर्णोद्धार, ओपन जिम व खाद-बीज की समय पर सुगम उपलब्धता।
+6. पारदर्शी प्रशासन: ग्राम पंचायत के प्रत्येक कार्य व सरकारी योजनाओं का शत-प्रतिशत निष्पक्ष लाभ।
 """.strip()
 
     cursor.execute("""
     INSERT INTO candidate_info (
-        id, name_hindi, name_english, role, slogan, phone, whatsapp, office_address, manifesto
+        id, name_hindi, name_english, mentor_hindi, mentor_english,
+        role, slogan, phone, whatsapp, office_address, nivedak, manifesto
     ) VALUES (
         1,
         'प्रद्युम्न नागर',
         'Pradhyumna Nagar',
-        'प्रधान / सरपंच पद प्रत्याशी',
-        'विकास का नया संकल्प — सबका साथ, गाँव का सर्वांगीण विकास',
-        '+91 98765 43210',
-        '+91 98765 43210',
-        'मुख्य बस स्टैंड चौराहा, ग्राम पंचायत जैनगर',
+        'राजेन्द्र नागर',
+        'Rajendra Nagar',
+        'सरपंच पद हेतु लोकप्रिय उम्मीदवार',
+        'सबका साथ, सबका विकास — एक वोट बदलाव के लिए, सेवा और विकास के लिए',
+        '9636556851',
+        '9636556851',
+        'मुख्य बस स्टैंड चौराहा, ग्राम पंचायत जयनगर',
+        'समस्त ग्राम पंचायत वासी — हांपाहेड़ी, भौराजेड़ी, जयनगर, गोविन्दपुरा',
         ?
     );
     """, (manifesto,))
@@ -206,7 +212,8 @@ def build_database(excel_dir: str = DEFAULT_EXCEL_DIR, db_path: str = DEFAULT_DB
             gender_en = ws.cell(r, header_map.get("Gender_English", 12)).value or ""
             page = ws.cell(r, header_map.get("Page_Number", 13)).value or 0
             section = ws.cell(r, header_map.get("Section_Name", 14)).value or ""
-            panchayat = ws.cell(r, header_map.get("Panchayat_Name", 15)).value or "जैनगर"
+            raw_panchayat = ws.cell(r, header_map.get("Panchayat_Name", 15)).value or "जयनगर"
+            panchayat = "जयनगर" if "जयनगर" in str(raw_panchayat) or "जैनगर" in str(raw_panchayat) else str(raw_panchayat)
             ward = ws.cell(r, header_map.get("Ward_Number", 16)).value or f_idx
             conf_val = ws.cell(r, header_map.get("OCR_Confidence", 17)).value or 100.0
             rev_status = ws.cell(r, header_map.get("Review_Status", 18)).value or "VERIFIED"

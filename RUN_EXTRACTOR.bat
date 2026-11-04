@@ -12,16 +12,18 @@ echo  [1] Process ALL 9 PDFs in "VOTER LISTS" folder (Batch Mode)
 echo  [2] Process a Single PDF file
 echo  [3] Run Diagnostic and Synthetic Tests
 echo  [4] Open Output Folder
-echo  [5] Exit
+echo  [5] 📱 Launch "JAINAGAR CHUNAV" Mobile App (Desktop Preview)
+echo  [6] Exit
 echo.
 echo =====================================================================
-set /p choice="Select an option (1-5): "
+set /p choice="Select an option (1-6): "
 
 if "%choice%"=="1" goto BATCH
 if "%choice%"=="2" goto SINGLE
 if "%choice%"=="3" goto TEST
 if "%choice%"=="4" goto OPEN_FOLDER
-if "%choice%"=="5" goto EXIT
+if "%choice%"=="5" goto LAUNCH_APP
+if "%choice%"=="6" goto EXIT
 goto MENU
 
 :BATCH
@@ -57,6 +59,14 @@ goto MENU
 
 :OPEN_FOLDER
 explorer output
+goto MENU
+
+:LAUNCH_APP
+cls
+echo Launching "JAINAGAR CHUNAV 2026" Mobile App Preview...
+cd "UI WORK"
+python main.py
+cd ..
 goto MENU
 
 :EXIT
