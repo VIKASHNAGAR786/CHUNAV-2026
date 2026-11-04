@@ -2,7 +2,7 @@
 =============================================================================
              ZIP ARCHIVER FOR GOOGLE COLAB APK BUILD
  Creates a self-contained ZIP archive containing all app code, assets,
- SQLite database, and buildozer.spec ready for 1-click Colab upload.
+ SQLite database, and the complete fast Android Gradle project.
 =============================================================================
 """
 
@@ -14,6 +14,7 @@ ZIP_OUTPUT = os.path.join(UI_WORK_DIR, "UI_WORK_FOR_COLAB.zip")
 
 FILES_TO_INCLUDE = [
     "main.py",
+    "app.py",
     "database.py",
     "promotion_data.py",
     "buildozer.spec",
@@ -21,7 +22,9 @@ FILES_TO_INCLUDE = [
 ]
 
 FOLDERS_TO_INCLUDE = [
-    "assets"
+    "assets",
+    "www",
+    "android_project"
 ]
 
 
