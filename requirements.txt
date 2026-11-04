@@ -1,0 +1,13 @@
+# Smart Voter List PDF to Excel Extractor
+# Required Python Dependencies
+
+PyMuPDF>=1.24.0
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+regex>=2023.0.0
+tqdm>=4.65.0
+indic-transliteration>=2.3.0
