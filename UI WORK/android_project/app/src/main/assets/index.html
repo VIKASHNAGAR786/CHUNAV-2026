@@ -53,30 +53,218 @@
       position: relative;
     }
 
-    /* Top App Bar */
+    /* Top App Bar & Campaign Marketing Header */
     .app-header {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
       color: #fff;
-      padding: 12px 16px;
+      padding: 10px 12px 10px 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+      z-index: 10;
+      position: relative;
+    }
+    .header-top-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      z-index: 10;
+      gap: 8px;
     }
-    .app-header h1 {
-      font-size: 19px;
-      font-weight: bold;
+    .header-brand {
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .app-header .sub-badge {
-      font-size: 11px;
-      background: rgba(255,255,255,0.2);
-      padding: 3px 8px;
+    .header-brand h1 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin: 0;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-brand .sub-badge {
+      font-size: 10px;
+      background: rgba(255,255,255,0.22);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #FFF9C4;
+    }
+    .header-villages {
+      font-size: 10px;
+      color: #BBDEFB;
+      font-weight: 500;
+      margin-top: 1px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-share-btn {
+      background: #25D366;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 11px;
+      font-size: 11.5px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      transition: transform 0.15s ease;
+      white-space: nowrap;
+    }
+    .header-share-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* Candidate Spotlight Card inside Header (Persistent Across App) */
+    .header-candidate-banner {
+      margin-top: 8px;
+      background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 50%, #FFECB3 100%);
+      border: 1.5px solid #FFC107;
       border-radius: 12px;
-      font-weight: normal;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.14);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .header-candidate-banner:active {
+      transform: scale(0.98);
+      background: #FFF9C4;
+    }
+    .h-cand-avatar-wrap {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+    .h-cand-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #E65100;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+      background: #FFE082;
+      display: block;
+    }
+    .h-cand-badge-post {
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #D84315, #BF360C);
+      color: #FFFFFF;
+      font-size: 8.5px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 6px;
+      white-space: nowrap;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      letter-spacing: 0.3px;
+    }
+    .h-cand-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .h-cand-name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+    .h-cand-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: #B71C1C;
+      letter-spacing: -0.2px;
+    }
+    .h-cand-tag {
+      font-size: 9.5px;
+      font-weight: bold;
+      background: #E65100;
+      color: #FFF;
+      padding: 1.5px 6px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+    .h-cand-mentor {
+      font-size: 11px;
+      color: #263238;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+    .h-cand-slogan {
+      font-size: 10px;
+      color: #C2410C;
+      font-weight: bold;
+      margin-top: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .h-cand-arrow {
+      color: #B71C1C;
+      font-size: 16px;
+      font-weight: bold;
+      padding-left: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Live Campaign Marquee / Ticker Bar */
+    .campaign-ticker-bar {
+      background: linear-gradient(90deg, #D84315 0%, #E65100 50%, #BF360C 100%);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      height: 28px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+      z-index: 9;
+      position: relative;
+    }
+    .ticker-lead-badge {
+      background: #FFD54F;
+      color: #B71C1C;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 0 8px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+    .ticker-scroll-wrap {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+    .ticker-scroll-content {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: tickerAnimation 24s linear infinite;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    .ticker-scroll-wrap:hover .ticker-scroll-content {
+      animation-play-state: paused;
+    }
+    @keyframes tickerAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
 
     /* Main Container (Scrollable) */
@@ -541,6 +729,13 @@
       color: #0F172A;
       text-align: right;
     }
+    .slip-candidate-header {
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 100%);
+      border: 1.5px solid #FFE082;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
     .slip-candidate-footer {
       margin-top: 10px;
       background: #FFF8E1;
@@ -567,27 +762,102 @@
 
     /* Family Section */
     .family-section {
-      margin-top: 12px;
+      margin-top: 14px;
       background: #F8FAFC;
-      border-radius: 8px;
-      padding: 10px;
-      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      border: 1.5px solid #CBD5E0;
     }
     .family-title {
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: bold;
       color: var(--primary);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
     .family-chip {
-      display: inline-block;
-      background: #FFF;
-      border: 1px solid #CBD5E0;
-      border-radius: 6px;
-      padding: 4px 8px;
-      font-size: 11.5px;
-      margin: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E0;
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin-bottom: 7px;
       cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .family-chip:active {
+      background: #E3F2FD;
+      border-color: var(--primary);
+      transform: scale(0.98);
+    }
+    .family-chip-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      text-align: left;
+    }
+    .family-chip-name {
+      font-size: 13.5px;
+      font-weight: bold;
+      color: #0F172A;
+    }
+    .family-chip-sub {
+      font-size: 11px;
+      color: #64748B;
+    }
+    .family-chip-btn {
+      font-size: 11px;
+      font-weight: bold;
+      color: var(--primary);
+      background: #E3F2FD;
+      padding: 5px 9px;
+      border-radius: 6px;
+      border: 1px solid #BBDEFB;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+
+    /* Progress bar & Quick Stats */
+    .progress-bar-wrap {
+      width: 100%;
+      height: 10px;
+      background: #E2E8F0;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #43A047, #2E7D32);
+      border-radius: 5px;
+      transition: width 0.3s ease;
+    }
+    .quick-stats-actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .quick-stat-btn {
+      padding: 8px 4px;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #FFF;
+      color: var(--text-main);
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .quick-stat-btn:active {
+      background: #EDF2F7;
     }
 
     /* Karyakarta Action Toggles */
@@ -696,15 +966,379 @@
     .stats-table tr:hover {
       background: #F8FAFC;
     }
+
+    /* Protector Layer / Security Lock Screen */
+    .protector-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, #0A192F 0%, #172A45 50%, #0F172A 100%);
+      z-index: 99999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      padding: 16px;
+    }
+    .protector-inner {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: auto;
+    }
+    .prot-header {
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .prot-tag {
+      font-size: 17px;
+      font-weight: 800;
+      color: #FFD54F;
+      letter-spacing: 0.3px;
+    }
+    .prot-villages {
+      font-size: 11px;
+      color: #90CAF9;
+      margin-top: 3px;
+      font-weight: 600;
+    }
+    .prot-cand-card {
+      background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 50%, #FFE082 100%);
+      border: 2px solid #FFA000;
+      border-radius: 16px;
+      padding: 14px 12px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+    .prot-photo-ring {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 6px auto;
+      position: relative;
+    }
+    .prot-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #E65100;
+      box-shadow: 0 4px 12px rgba(230,81,0,0.35);
+      background: #FFF;
+      display: block;
+    }
+    .prot-badge-sarpanch {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #D84315;
+      color: #FFF;
+      font-size: 9.5px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .prot-cand-name {
+      font-size: 21px;
+      font-weight: 900;
+      color: #B71C1C;
+      margin-top: 6px;
+      letter-spacing: -0.3px;
+    }
+    .prot-cand-nick {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #E65100;
+      margin-top: 1px;
+    }
+    .prot-mentor-box {
+      font-size: 11.5px;
+      color: #37474F;
+      margin-top: 5px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.85);
+      padding: 3px 10px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .prot-slogan {
+      font-size: 11.5px;
+      color: #BF360C;
+      font-weight: 700;
+      margin-top: 8px;
+      line-height: 1.35;
+    }
+    .prot-features-row {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .prot-pill {
+      font-size: 10px;
+      font-weight: 800;
+      background: #FFFFFF;
+      color: #D84315;
+      border: 1px solid #FFCC80;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+    .prot-auth-box {
+      background: #FFFFFF;
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      border: 1.5px solid #CBD5E0;
+    }
+    .prot-auth-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .prot-auth-sub {
+      font-size: 11px;
+      color: #64748B;
+      margin-top: 3px;
+      line-height: 1.3;
+    }
+    .prot-input-group {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .prot-input-icon {
+      position: absolute;
+      left: 10px;
+      font-size: 15px;
+      pointer-events: none;
+    }
+    .prot-password-input {
+      width: 100%;
+      padding: 11px 40px 11px 34px;
+      border-radius: 8px;
+      border: 1.5px solid #CBD5E0;
+      font-size: 14px;
+      font-weight: 600;
+      outline: none;
+      background: #F8FAFC;
+      transition: border-color 0.2s;
+    }
+    .prot-password-input:focus {
+      border-color: #0D47A1;
+      background: #FFF;
+    }
+    .prot-toggle-eye {
+      position: absolute;
+      right: 8px;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 4px;
+      color: #64748B;
+    }
+    .prot-unlock-btn {
+      width: 100%;
+      margin-top: 10px;
+      background: linear-gradient(135deg, #E65100 0%, #FF6F00 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 14.5px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(230,81,0,0.3);
+      transition: transform 0.15s;
+    }
+    .prot-unlock-btn:active {
+      transform: scale(0.98);
+    }
+    .prot-error-msg {
+      margin-top: 8px;
+      background: #FFEBEE;
+      color: #C62828;
+      border: 1px solid #FFCDD2;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: bold;
+      text-align: center;
+      animation: shakeAnim 0.3s ease;
+    }
+    @keyframes shakeAnim {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+    .prot-hint {
+      font-size: 10.5px;
+      color: #64748B;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .prot-support-card {
+      background: rgba(255,255,255,0.92);
+      border-radius: 12px;
+      padding: 10px 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
+  <!-- PROTECTOR / LOCK SCREEN OVERLAY (Password: voteforjonty - 24hr Cache) -->
+  <div id="appProtectorOverlay" class="protector-screen">
+    <div class="protector-inner">
+      <!-- Top Marketing Header -->
+      <div class="prot-header">
+        <div class="prot-tag">🗳️ ग्राम पंचायत जयनगर चुनाव 2026</div>
+        <div class="prot-villages">📍 हांपाहेड़ी • भौराजेड़ी • जयनगर • गोविन्दपुरा</div>
+      </div>
+
+      <!-- Candidate Campaign Card -->
+      <div class="prot-cand-card">
+        <div class="prot-photo-ring">
+          <img src="assets/candidate/candidate_photo.png" alt="प्रद्युम्न नागर" class="prot-photo">
+          <span class="prot-badge-sarpanch">सरपंच पद हेतु</span>
+        </div>
+        <div class="prot-cand-name">प्रद्युम्न नागर</div>
+        <div class="prot-cand-nick">( जॉन्टी भैया )</div>
+        <div class="prot-mentor-box">
+          संरक्षक: <b>श्री राजेन्द्र नागर</b> | 📞 9636556851
+        </div>
+        <div class="prot-slogan">
+          🚩 "सबका साथ, सबका विकास — एक वोट बदलाव, सेवा और युवा नेतृत्व के लिए"
+        </div>
+        <div class="prot-features-row">
+          <span class="prot-pill">🎓 शिक्षित</span>
+          <span class="prot-pill">⚡ युवा जोश</span>
+          <span class="prot-pill">🤝 संघर्षशील</span>
+          <span class="prot-pill">⚖️ निष्पक्ष सेवा</span>
+        </div>
+      </div>
+
+      <!-- Password Protector Form Box -->
+      <div class="prot-auth-box">
+        <div class="prot-auth-title">
+          <span>🔒 अधिकृत कार्यकर्ता प्रवेश (Protected Access)</span>
+        </div>
+        <div class="prot-auth-sub">
+          मतदाता सूची व चुनाव प्रबंधन देखने हेतु सुरक्षा पासवर्ड दर्ज करें:
+        </div>
+
+        <div class="prot-input-group">
+          <span class="prot-input-icon">🔑</span>
+          <input type="password" id="protectorPasswordInput" class="prot-password-input"
+                 placeholder="सुरक्षा पासवर्ड दर्ज करें..."
+                 autocomplete="off"
+                 autocapitalize="none"
+                 onkeydown="if(event.key==='Enter') verifyProtectorPassword()">
+          <button type="button" class="prot-toggle-eye" onclick="togglePasswordVisibility()" title="पासवर्ड देखें">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+
+        <div id="protectorErrorMsg" class="prot-error-msg" style="display: none;"></div>
+
+        <button type="button" class="prot-unlock-btn" onclick="verifyProtectorPassword()">
+          🚀 ऐप में प्रवेश करें (Unlock)
+        </button>
+
+        <div class="prot-hint">
+          ⏳ यह पासवर्ड <b>24 घंटे</b> तक मान्य रहेगा। 24 घंटे बाद दोबारा दर्ज करना होगा।
+        </div>
+      </div>
+
+      <!-- Helpline & Social Appeal Share -->
+      <div class="prot-support-card">
+        <div style="font-size: 11.5px; color: #475569; font-weight: bold; margin-bottom: 6px;">
+          पासवर्ड या सहायता हेतु चुनाव कार्यालय से संपर्क करें:
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-outline" style="font-size: 11.5px; padding: 8px;" onclick="window.open('tel:9636556851')">
+            📞 9636556851
+          </button>
+          <button class="btn btn-whatsapp" style="font-size: 11.5px; padding: 8px;" onclick="shareCandidateAppeal()">
+            📲 प्रचार शेयर करें
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Immediate pre-render check to prevent lock screen flicker if within 24hr cache
+    try {
+      const raw = localStorage.getItem('jayanagar_auth_session');
+      if (raw) {
+        const data = JSON.parse(raw);
+        if (data && data.authenticated && data.timestamp && ((Date.now() - data.timestamp) < 24 * 60 * 60 * 1000)) {
+          document.getElementById('appProtectorOverlay').style.display = 'none';
+        }
+      }
+    } catch(e) {}
+  </script>
+
+  <!-- Top Navigation Header with Campaign Branding & Marketing -->
   <header class="app-header">
-    <h1>🗳️ ग्राम पंचायत जयनगर <span class="sub-badge">2026</span></h1>
-    <div style="font-size: 12px; font-weight: bold; color: #FFD54F;">सरपंच चुनाव</div>
+    <div class="header-top-row">
+      <div class="header-brand">
+        <span style="font-size: 20px;">🗳️</span>
+        <div>
+          <h1>ग्राम पंचायत जयनगर <span class="sub-badge">2026</span></h1>
+          <div class="header-villages">हांपाहेड़ी • भौराजेड़ी • जयनगर • गोविन्दपुरा</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="header-share-btn" onclick="shareCandidateAppeal()" title="प्रचार शेयर करें">
+          <span>📲</span> <span class="btn-text">प्रचार शेयर</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Candidate Marketing Spotlight Banner inside Sticky Header -->
+    <div class="header-candidate-banner" onclick="switchTab('candidate')" title="प्रत्याशी संकल्प पत्र व विवरण देखें">
+      <div class="h-cand-avatar-wrap">
+        <img src="assets/candidate/candidate_photo.png" alt="प्रद्युम्न नागर" class="h-cand-avatar">
+        <span class="h-cand-badge-post">सरपंच पद</span>
+      </div>
+      <div class="h-cand-info">
+        <div class="h-cand-name-row">
+          <span class="h-cand-name">प्रद्युम्न नागर</span>
+          <span class="h-cand-tag">⭐ लोकप्रिय प्रत्याशी</span>
+        </div>
+        <div class="h-cand-mentor">
+          संरक्षक: <b>श्री राजेन्द्र नागर</b> | 📞 9636556851
+        </div>
+        <div class="h-cand-slogan">
+          🚩 "सबका साथ, सबका विकास — सेवा और विकास के लिए"
+        </div>
+      </div>
+      <div class="h-cand-arrow">➔</div>
+    </div>
   </header>
+
+  <!-- Live Moving Campaign Ticker (चलती प्रचार पट्टी) -->
+  <div class="campaign-ticker-bar">
+    <div class="ticker-lead-badge">🚩 प्रचार अपील</div>
+    <div class="ticker-scroll-wrap">
+      <div class="ticker-scroll-content">
+        🌟 ग्राम पंचायत जयनगर के सर्वांगीण विकास हेतु युवा, शिक्षित व सेवाभावी प्रत्याशी <b>प्रद्युम्न नागर</b> को भारी मतों से विजयी बनावें! • <b>संरक्षक: श्री राजेन्द्र नागर</b> (मो. 9636556851) • "सबका साथ, सबका विकास — एक वोट बदलाव के लिए" • 📍 हांपाहेड़ी • भौराजेड़ी • जयनगर • गोविन्दपुरा 🌟
+      </div>
+    </div>
+  </div>
 
   <!-- Main Scrollable Content -->
   <main class="content-area" id="mainContent">
@@ -744,18 +1378,22 @@
       </div>
 
       <!-- Quick Summary Counter -->
-      <div class="counter-strip">
+      <div class="counter-strip" style="grid-template-columns: repeat(4, 1fr); gap: 6px;">
         <div class="counter-box">
-          <div class="counter-number" style="color: var(--primary);">3,568</div>
-          <div class="counter-label">कुल मतदाता</div>
+          <div class="counter-number" style="color: var(--primary); font-size: 16px;">3,568</div>
+          <div class="counter-label" style="font-size: 10px;">कुल मतदाता</div>
         </div>
         <div class="counter-box">
-          <div class="counter-number" style="color: var(--accent);">9</div>
-          <div class="counter-label">कुल वार्ड</div>
+          <div class="counter-number" style="color: var(--accent); font-size: 16px;">9</div>
+          <div class="counter-label" style="font-size: 10px;">कुल वार्ड</div>
         </div>
         <div class="counter-box">
-          <div class="counter-number" id="homePolledCount" style="color: var(--green);">0</div>
-          <div class="counter-label">वोटेड (मतदान)</div>
+          <div class="counter-number" id="homePolledCount" style="color: var(--green); font-size: 16px;">0</div>
+          <div class="counter-label" style="font-size: 10px;">✔ मतदान</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" id="homeSupporterCount" style="color: #1976D2; font-size: 16px;">0</div>
+          <div class="counter-label" style="font-size: 10px;">⭐ समर्थक</div>
         </div>
       </div>
 
@@ -775,6 +1413,16 @@
 
     <!-- TAB 2: SEARCH SCREEN -->
     <div id="tab-search" style="display: none;">
+      <!-- Campaign Marketing Reminder Banner -->
+      <div style="background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 100%); border: 1.5px solid #FFE082; border-radius: 10px; padding: 7px 10px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; gap: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+        <div style="font-size: 11px; color: #B71C1C; font-weight: bold; line-height: 1.3;">
+          🚩 पर्ची शेयर करते समय <b>प्रद्युम्न नागर जी</b> के समर्थन की अपील जरूर करें!
+        </div>
+        <button onclick="shareCandidateAppeal()" style="background: #25D366; color: #FFF; border: none; border-radius: 6px; padding: 4px 8px; font-size: 10.5px; font-weight: bold; white-space: nowrap; cursor: pointer; display: flex; align-items: center; gap: 3px;">
+          <span>📲</span> प्रचार भेजें
+        </button>
+      </div>
+
       <!-- Search Input Card -->
       <div class="search-box-card">
         <div class="search-input-wrap">
@@ -786,6 +1434,14 @@
 
         <div class="filter-chips-row" id="wardFilterChips">
           <!-- Rendered by JS -->
+        </div>
+
+        <div class="filter-chips-row" id="statusFilterChips" style="margin-top: 6px;">
+          <div class="filter-chip active" id="chipStatusAll" onclick="setStatusFilter('all')">सभी (3,568)</div>
+          <div class="filter-chip" id="chipStatusSupporter" onclick="setStatusFilter('supporter')">⭐ समर्थक (<span id="badgeSupporterCount">0</span>)</div>
+          <div class="filter-chip" id="chipStatusSuppPending" onclick="setStatusFilter('supporter_pending')">⏳ समर्थक (वोट बाकी) (<span id="badgeSuppPendingCount">0</span>)</div>
+          <div class="filter-chip" id="chipStatusVoted" onclick="setStatusFilter('voted')">✔ मतदान किया (<span id="badgeVotedCount">0</span>)</div>
+          <div class="filter-chip" id="chipStatusPending" onclick="setStatusFilter('pending')">⏳ सभी बाकी (<span id="badgePendingCount">0</span>)</div>
         </div>
       </div>
 
@@ -891,30 +1547,99 @@
         <button class="btn btn-outline" style="padding: 12px; font-size: 14px;" onclick="window.open('tel:9636556851')">
           📞 कॉल करें: 9636556851
         </button>
+        <button class="btn" style="padding: 10px; font-size: 12.5px; background: #ECEFF1; color: #455A64; border: 1px solid #CFD8DC;" onclick="lockAppManually()">
+          🔒 ऐप लॉक करें (सुरक्षा पुनः सक्रिय)
+        </button>
       </div>
     </div>
 
     <!-- TAB 4: ANALYTICS SCREEN -->
     <div id="tab-stats" style="display: none;">
       <div class="section-title">
-        <span>📊 पंचायत सांख्यिकी (Analytics):</span>
+        <span>📊 चुनाव लाइव स्थिति (Election Day Live Dashboard):</span>
+      </div>
+
+      <!-- Real-time Turnout Card -->
+      <div style="background: #FFF; border-radius: 12px; padding: 12px; border: 1.5px solid var(--border); margin-bottom: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+          <span style="font-size: 13px; font-weight: bold; color: #475569;">मतदान प्रगति (Live Voting Turnout):</span>
+          <span style="font-size: 13.5px; font-weight: bold; color: var(--green);" id="statsPolledPct">0.0% पूर्ण</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="statsProgressBar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Live Counters Grid -->
+      <div class="counter-strip" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 10px;">
+        <div class="counter-box" style="border-left: 4px solid var(--green); text-align: left; padding: 10px 12px;">
+          <div class="counter-number" style="color: var(--green);" id="statsTotalPolled">0</div>
+          <div class="counter-label" style="font-size: 11.5px; font-weight: bold; color: #1B5E20;">✔ कुल मतदान किया</div>
+        </div>
+        <div class="counter-box" style="border-left: 4px solid #1976D2; text-align: left; padding: 10px 12px;">
+          <div class="counter-number" style="color: #1976D2;" id="statsTotalSupporters">0</div>
+          <div class="counter-label" style="font-size: 11.5px; font-weight: bold; color: #0D47A1;">⭐ कुल समर्थक</div>
+        </div>
       </div>
 
       <div class="counter-strip" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 12px;">
+        <div class="counter-box" style="border-left: 4px solid #E65100; text-align: left; padding: 10px 12px;">
+          <div class="counter-number" style="color: #E65100;" id="statsTotalPending">3,568</div>
+          <div class="counter-label" style="font-size: 11.5px; font-weight: bold; color: #BF360C;">⏳ शेष मतदान (Pending)</div>
+        </div>
+        <div class="counter-box" style="border-left: 4px solid var(--primary); text-align: left; padding: 10px 12px;">
+          <div class="counter-number" style="color: var(--primary);">3,568</div>
+          <div class="counter-label" style="font-size: 11.5px; font-weight: bold; color: #0D47A1;">🗳️ कुल मतदाता (9 वार्ड)</div>
+        </div>
+      </div>
+
+      <!-- Supporter Breakdown Card -->
+      <div style="background: #E3F2FD; border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; border: 1.5px solid #90CAF9; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-size: 13px; font-weight: bold; color: #0D47A1;">⭐ समर्थकों का मतदान ट्रैकर:</div>
+          <div style="font-size: 11px; color: #1565C0;">हमारे कुल समर्थक जिन्होंने वोट डाल दिया vs बाकी</div>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <span style="background: #FFF; padding: 4px 8px; border-radius: 6px; font-size: 11.5px; font-weight: bold; color: var(--green); border: 1px solid #C8E6C9;" id="statsSupportersPolled">0 वोटेड</span>
+          <span style="background: #FFF; padding: 4px 8px; border-radius: 6px; font-size: 11.5px; font-weight: bold; color: #E65100; border: 1px solid #FFCC80;" id="statsSupportersPending">0 बाकी</span>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="quick-stats-actions" style="grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 14px;">
+        <button class="quick-stat-btn" onclick="filterFromStats('supporter')" style="color: #1565C0; border-color: #90CAF9;">
+          ⭐ समर्थक (<span id="btnStatSuppCount">0</span>)
+        </button>
+        <button class="quick-stat-btn" onclick="filterFromStats('supporter_pending')" style="color: #C62828; border-color: #EF9A9A; background: #FFEBEE;">
+          🚨 समर्थक बाकी (<span id="btnStatSuppPendingCount">0</span>)
+        </button>
+        <button class="quick-stat-btn" onclick="filterFromStats('voted')" style="color: #2E7D32; border-color: #A5D6A7;">
+          ✔ मतदान (<span id="btnStatVotedCount">0</span>)
+        </button>
+        <button class="quick-stat-btn" onclick="filterFromStats('pending')" style="color: #D84315; border-color: #FFCC80;">
+          ⏳ शेष वोटर (<span id="btnStatPendingCount">3568</span>)
+        </button>
+      </div>
+
+      <!-- Demographics -->
+      <div class="section-title">
+        <span>जनसांख्यिकी (Demographics):</span>
+      </div>
+      <div class="counter-strip" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 10px;">
         <div class="counter-box">
           <div class="counter-number" style="color: var(--primary);">1,788</div>
-          <div class="counter-label">👨 पुरुष मतदाता (50.1%)</div>
+          <div class="counter-label">👨 पुरुष (50.1%)</div>
         </div>
         <div class="counter-box">
           <div class="counter-number" style="color: #AD1457;">1,779</div>
-          <div class="counter-label">👩 महिला मतदाता (49.9%)</div>
+          <div class="counter-label">👩 महिला (49.9%)</div>
         </div>
       </div>
 
       <div class="counter-strip" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 14px;">
         <div class="counter-box">
           <div class="counter-number" style="color: #E65100;">709</div>
-          <div class="counter-label">🌟 युवा मतदाता (18-25)</div>
+          <div class="counter-label">🌟 युवा वोटर (18-25)</div>
         </div>
         <div class="counter-box">
           <div class="counter-number" style="color: #00897B;">40.6</div>
@@ -922,17 +1647,19 @@
         </div>
       </div>
 
+      <!-- Ward Breakdown Table -->
       <div class="section-title">
-        <span>वार्डवार मतदाता विवरण (Ward Breakdown):</span>
+        <span>वार्डवार लाइव स्थिति (Ward-wise Live Status):</span>
       </div>
       <table class="stats-table">
         <thead>
           <tr>
             <th>वार्ड</th>
             <th>कुल</th>
-            <th>पुरुष</th>
-            <th>महिला</th>
-            <th>मतदान</th>
+            <th style="color: var(--green);">✔ वोटेड</th>
+            <th style="color: #1976D2;">⭐ समर्थक</th>
+            <th style="color: #E65100;">⏳ शेष</th>
+            <th>प्रगति</th>
           </tr>
         </thead>
         <tbody id="wardStatsTableBody">
@@ -973,6 +1700,23 @@
       <div class="modal-body">
         <!-- Printable Voter Slip Box -->
         <div class="voter-slip-container">
+          <!-- Top Candidate Branding inside Slip -->
+          <div class="slip-candidate-header">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <img src="assets/candidate/candidate_photo.png" alt="प्रद्युम्न नागर" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #FF8F00; object-fit: cover; flex-shrink: 0; background: #FFF8E1;">
+                <div>
+                  <div style="font-size: 13.5px; font-weight: 800; color: #B71C1C; line-height: 1.1;">प्रद्युम्न नागर</div>
+                  <div style="font-size: 10px; font-weight: bold; color: var(--primary);">सरपंच पद हेतु लोकप्रिय प्रत्याशी</div>
+                </div>
+              </div>
+              <div style="text-align: right; flex-shrink: 0;">
+                <div style="font-size: 10px; color: #37474F; font-weight: bold;">संरक्षक: श्री राजेन्द्र नागर</div>
+                <div style="font-size: 10px; color: #2E7D32; font-weight: bold;">📞 9636556851</div>
+              </div>
+            </div>
+          </div>
+
           <div class="slip-title">
             ग्राम पंचायत जयनगर निर्वाचन नामावली 2026
           </div>
@@ -1023,11 +1767,17 @@
           कार्यकर्ता मार्किंग (Election Day Tracker):
         </div>
         <div class="karyakarta-actions">
-          <button class="toggle-btn" id="btnMarkVoted" onclick="toggleStatus('voted')">
+          <button class="toggle-btn" id="btnMarkVoted" onclick="toggleVoted()">
             ✔ मतदान किया
           </button>
-          <button class="toggle-btn" id="btnMarkSupporter" onclick="toggleStatus('supporter')">
+          <button class="toggle-btn" id="btnMarkSupporter" onclick="toggleSupporter()">
             ⭐ समर्थक
+          </button>
+        </div>
+        <div class="undo-row" style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; padding: 2px 2px;">
+          <span style="font-size: 11px; color: #64748B;">(दोनों एक साथ चुने जा सकते हैं • दोबारा दबाकर हटाएं)</span>
+          <button class="btn-undo" id="btnUndoStatus" onclick="undoStatus()" style="display: none; background: #FFF; border: 1.5px dashed #EF5350; border-radius: 6px; padding: 3px 8px; font-size: 11px; color: #C62828; cursor: pointer; font-weight: bold;">
+            ↺ अनडू (दोनों हटाएं)
           </button>
         </div>
 
@@ -1049,6 +1799,7 @@
     // State
     let currentTab = 'home';
     let currentWard = 0;
+    let currentStatusFilter = 'all'; // 'all', 'supporter', 'voted', 'pending'
     let currentQuery = '';
     let currentVoter = null;
     let cachedVoters = [];
@@ -1065,16 +1816,168 @@
       { ward: 9, count: 462, m: 234, f: 228 }
     ];
 
+    // LocalStorage Offline Persistence with Dual Independent Flags (voted + supporter)
+    function normalizeStatus(val) {
+      if (!val) return { voted: false, supporter: false };
+      if (typeof val === 'string') {
+        return {
+          voted: val === 'voted' || val === 'both',
+          supporter: val === 'supporter' || val === 'both'
+        };
+      }
+      return {
+        voted: !!val.voted,
+        supporter: !!val.supporter
+      };
+    }
+
+    function loadSavedStatuses() {
+      try {
+        const raw = localStorage.getItem('jayanagar_voter_statuses');
+        return raw ? JSON.parse(raw) : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveStatus(voterId, statusObj) {
+      try {
+        const statuses = loadSavedStatuses();
+        if (!statusObj.voted && !statusObj.supporter) {
+          delete statuses[voterId];
+        } else {
+          statuses[voterId] = {
+            voted: !!statusObj.voted,
+            supporter: !!statusObj.supporter
+          };
+        }
+        localStorage.setItem('jayanagar_voter_statuses', JSON.stringify(statuses));
+      } catch (e) {}
+    }
+
+    // -------------------------------------------------------------
+    // PROTECTOR LAYER (Password: voteforjonty | 24-Hour Cache)
+    // -------------------------------------------------------------
+    const PROTECTOR_PASS = 'voteforjonty';
+    const AUTH_KEY = 'jayanagar_auth_session';
+    const AUTH_HOURS = 24;
+
+    function checkProtectorAuth() {
+      try {
+        const raw = localStorage.getItem(AUTH_KEY);
+        if (raw) {
+          const data = JSON.parse(raw);
+          if (data && data.authenticated && data.timestamp) {
+            const elapsedHours = (Date.now() - data.timestamp) / (1000 * 60 * 60);
+            if (elapsedHours < AUTH_HOURS) {
+              hideProtectorScreen();
+              return true;
+            }
+          }
+        }
+      } catch (e) {}
+      showProtectorScreen();
+      return false;
+    }
+
+    function verifyProtectorPassword() {
+      const input = document.getElementById("protectorPasswordInput");
+      const errorMsg = document.getElementById("protectorErrorMsg");
+      if (!input) return;
+
+      const entered = input.value.trim().toLowerCase();
+      if (entered === PROTECTOR_PASS) {
+        if (errorMsg) {
+          errorMsg.style.display = 'block';
+          errorMsg.style.background = '#E8F5E9';
+          errorMsg.style.color = '#2E7D32';
+          errorMsg.style.borderColor = '#C8E6C9';
+          errorMsg.innerText = '✅ पासवर्ड सत्यापित! ऐप अनलॉक हो गया है...';
+        }
+        try {
+          localStorage.setItem(AUTH_KEY, JSON.stringify({
+            authenticated: true,
+            timestamp: Date.now()
+          }));
+        } catch (e) {}
+
+        setTimeout(() => {
+          hideProtectorScreen();
+        }, 350);
+      } else {
+        if (errorMsg) {
+          errorMsg.style.display = 'block';
+          errorMsg.style.background = '#FFEBEE';
+          errorMsg.style.color = '#C62828';
+          errorMsg.style.borderColor = '#FFCDD2';
+          errorMsg.innerText = '❌ गलत पासवर्ड! कृपया सही सुरक्षा पासवर्ड दर्ज करें।';
+        }
+        input.focus();
+        input.select();
+      }
+    }
+
+    function togglePasswordVisibility() {
+      const input = document.getElementById("protectorPasswordInput");
+      const icon = document.getElementById("eyeIcon");
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        if (icon) icon.innerText = '🙈';
+      } else {
+        input.type = 'password';
+        if (icon) icon.innerText = '👁️';
+      }
+    }
+
+    function showProtectorScreen() {
+      const el = document.getElementById("appProtectorOverlay");
+      if (el) el.style.display = 'flex';
+      const input = document.getElementById("protectorPasswordInput");
+      if (input) {
+        input.value = '';
+        setTimeout(() => input.focus(), 200);
+      }
+    }
+
+    function hideProtectorScreen() {
+      const el = document.getElementById("appProtectorOverlay");
+      if (el) el.style.display = 'none';
+    }
+
+    function lockAppManually() {
+      try {
+        localStorage.removeItem(AUTH_KEY);
+      } catch (e) {}
+      showProtectorScreen();
+      const errorMsg = document.getElementById("protectorErrorMsg");
+      if (errorMsg) errorMsg.style.display = 'none';
+    }
+
     // Initialization
     document.addEventListener("DOMContentLoaded", () => {
+      // 1. Verify Protector Layer Authentication (24hr session cache)
+      checkProtectorAuth();
+
+      // Sync saved statuses into in-memory dataset
+      const saved = loadSavedStatuses();
+      if (window._staticVoters) {
+        window._staticVoters.forEach(v => {
+          const s = normalizeStatus(saved[v.id]);
+          v.is_voted = s.voted;
+          v.is_supporter = s.supporter;
+        });
+      }
+
       renderHomeWards();
       renderWardFilterChips();
-      renderStatsTable();
+      updateLiveStatsAndCounters();
       loadVoters();
     });
 
     function renderHomeWards() {
       const container = document.getElementById("homeWardGrid");
+      if (!container) return;
       container.innerHTML = WARD_COUNTS.map(w => `
         <div class="ward-chip" onclick="selectWardAndSearch(${w.ward})">
           वार्ड ${w.ward}
@@ -1085,6 +1988,7 @@
 
     function renderWardFilterChips() {
       const container = document.getElementById("wardFilterChips");
+      if (!container) return;
       let html = `<div class="filter-chip ${currentWard === 0 ? 'active' : ''}" onclick="setWardFilter(0)">सभी 9 वार्ड</div>`;
       html += WARD_COUNTS.map(w => `
         <div class="filter-chip ${currentWard === w.ward ? 'active' : ''}" onclick="setWardFilter(${w.ward})">
@@ -1094,17 +1998,29 @@
       container.innerHTML = html;
     }
 
-    function renderStatsTable() {
-      const tbody = document.getElementById("wardStatsTableBody");
-      tbody.innerHTML = WARD_COUNTS.map(w => `
-        <tr>
-          <td><b>वार्ड ${w.ward}</b></td>
-          <td><b>${w.count}</b></td>
-          <td>${w.m}</td>
-          <td>${w.f}</td>
-          <td><span id="statPolledW${w.ward}">0</span></td>
-        </tr>
-      `).join("");
+    function setStatusFilter(status) {
+      currentStatusFilter = status;
+      const chipMap = {
+        all: 'chipStatusAll',
+        supporter: 'chipStatusSupporter',
+        supporter_pending: 'chipStatusSuppPending',
+        voted: 'chipStatusVoted',
+        pending: 'chipStatusPending'
+      };
+      Object.keys(chipMap).forEach(key => {
+        const el = document.getElementById(chipMap[key]);
+        if (el) {
+          if (key === status) el.classList.add('active');
+          else el.classList.remove('active');
+        }
+      });
+      loadVoters();
+    }
+
+    function filterFromStats(status) {
+      setWardFilter(0);
+      setStatusFilter(status);
+      switchTab('search');
     }
 
     function switchTab(tabId) {
@@ -1119,7 +2035,12 @@
         }
       });
       window.scrollTo(0, 0);
-      document.getElementById("mainContent").scrollTop = 0;
+      const mc = document.getElementById("mainContent");
+      if (mc) mc.scrollTop = 0;
+
+      if (tabId === 'stats' || tabId === 'home') {
+        updateLiveStatsAndCounters();
+      }
     }
 
     function selectWardAndSearch(wardNum) {
@@ -1130,20 +2051,22 @@
     function setWardFilter(wardNum) {
       currentWard = wardNum;
       renderWardFilterChips();
-      document.getElementById("activeFilterBadge").innerText = wardNum === 0 ? "सभी 9 वार्ड" : `वार्ड ${wardNum}`;
+      const badge = document.getElementById("activeFilterBadge");
+      if (badge) badge.innerText = wardNum === 0 ? "सभी 9 वार्ड" : `वार्ड ${wardNum}`;
       loadVoters();
     }
 
     function onSearchInput(val) {
       currentQuery = val.trim();
-      document.getElementById("clearSearchBtn").style.display = currentQuery ? 'block' : 'none';
+      const clearBtn = document.getElementById("clearSearchBtn");
+      if (clearBtn) clearBtn.style.display = currentQuery ? 'block' : 'none';
       clearTimeout(window._searchTimer);
       window._searchTimer = setTimeout(loadVoters, 100);
     }
 
     function clearSearch() {
       const inp = document.getElementById("voterSearchInput");
-      inp.value = '';
+      if (inp) inp.value = '';
       onSearchInput('');
     }
 
@@ -1153,6 +2076,15 @@
         let results = window._staticVoters;
         if (ward > 0) {
           results = results.filter(v => v.ward_number === ward);
+        }
+        if (currentStatusFilter === 'voted') {
+          results = results.filter(v => v.is_voted);
+        } else if (currentStatusFilter === 'supporter') {
+          results = results.filter(v => v.is_supporter);
+        } else if (currentStatusFilter === 'supporter_pending') {
+          results = results.filter(v => v.is_supporter && !v.is_voted);
+        } else if (currentStatusFilter === 'pending') {
+          results = results.filter(v => !v.is_voted);
         }
         if (query) {
           const q = query.trim().toLowerCase();
@@ -1182,12 +2114,14 @@
 
     async function loadVoters() {
       const listContainer = document.getElementById("voterListContainer");
+      if (!listContainer) return;
       listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: #64748B;">लोड हो रहा है...</div>`;
 
       const voters = await fetchVotersFromDB(currentQuery, currentWard);
       cachedVoters = voters;
 
-      document.getElementById("searchResultCount").innerText = `${voters.length} मतदाता मिले`;
+      const countBadge = document.getElementById("searchResultCount");
+      if (countBadge) countBadge.innerText = `${voters.length} मतदाता मिले`;
 
       if (voters.length === 0) {
         listContainer.innerHTML = `
@@ -1200,35 +2134,55 @@
         return;
       }
 
-      listContainer.innerHTML = voters.map(v => `
-        <div class="voter-card ${v.voter_status ? 'status-' + v.voter_status : ''}" onclick="openVoterSlip(${v.id})">
-          <div class="card-top">
-            <div>
-              <span class="badge-serial">#${v.serial_no}</span>
-              <span class="badge-ward">वार्ड ${v.ward_number}</span>
+      listContainer.innerHTML = voters.map(v => {
+        let statusBadges = '';
+        if (v.is_voted) statusBadges += '<span style="background: #E8F5E9; color: var(--green); font-size: 11px; font-weight: bold; padding: 2px 7px; border-radius: 6px; margin-right: 4px; border: 1px solid #C8E6C9;">✔ वोटेड</span>';
+        if (v.is_supporter) statusBadges += '<span style="background: #E3F2FD; color: #1976D2; font-size: 11px; font-weight: bold; padding: 2px 7px; border-radius: 6px; border: 1px solid #BBDEFB;">⭐ समर्थक</span>';
+
+        let cardClass = 'voter-card';
+        if (v.is_voted && v.is_supporter) cardClass += ' status-both';
+        else if (v.is_voted) cardClass += ' status-voted';
+        else if (v.is_supporter) cardClass += ' status-supporter';
+
+        return `
+          <div class="${cardClass}" onclick="openVoterSlip(${v.id})">
+            <div class="card-top">
+              <div>
+                <span class="badge-serial">#${v.serial_no}</span>
+                <span class="badge-ward">वार्ड ${v.ward_number}</span>
+              </div>
+              <span class="badge-epic">${v.epic_number}</span>
             </div>
-            <span class="badge-epic">${v.epic_number}</span>
-          </div>
 
-          <div class="voter-name">${v.name_hindi} <span style="font-size: 13px; font-weight: normal; color: #64748B;">(${v.name_english})</span></div>
-          <div class="voter-relative">${v.relative_type || 'पिता'}: ${v.relative_hindi || '-'} (${v.relative_english || '-'})</div>
+            <div class="voter-name">${v.name_hindi} <span style="font-size: 13px; font-weight: normal; color: #64748B;">(${v.name_english})</span></div>
+            <div class="voter-relative">${v.relative_type || 'पिता'}: ${v.relative_hindi || '-'} (${v.relative_english || '-'})</div>
 
-          <div class="card-meta-row">
-            <div>मकान: <b>${v.house_number || '-'}</b> | आयु: <b>${v.age || '-'}</b> | <b>${v.gender_hindi || '-'}</b></div>
-            <button class="btn-slip-card" onclick="event.stopPropagation(); openVoterSlip(${v.id})">पर्ची ➔</button>
+            <div class="card-meta-row">
+              <div>
+                मकान: <b>${v.house_number || '-'}</b> | आयु: <b>${v.age || '-'}</b> | <b>${v.gender_hindi || '-'}</b>
+                ${statusBadges ? '<div style="margin-top: 4px;">' + statusBadges + '</div>' : ''}
+              </div>
+              <button class="btn-slip-card" onclick="event.stopPropagation(); openVoterSlip(${v.id})">पर्ची ➔</button>
+            </div>
           </div>
-        </div>
-      `).join("");
+        `;
+      }).join("");
     }
 
-    // Modal Slip & Actions
+    // Modal Slip & Interactive Family Selection
     async function openVoterSlip(voterId) {
-      let v = cachedVoters.find(x => x.id === voterId);
+      let v = (window._staticVoters && window._staticVoters.length > 0)
+              ? window._staticVoters.find(x => x.id === voterId)
+              : cachedVoters.find(x => x.id === voterId);
       if (!v && window.pywebview && window.pywebview.api) {
         v = await window.pywebview.api.get_voter(voterId);
       }
       if (!v) return;
       currentVoter = v;
+
+      // Reset scroll position to top
+      const modalBody = document.querySelector(".modal-body");
+      if (modalBody) modalBody.scrollTop = 0;
 
       document.getElementById("modalSlipHeader").innerText = `📋 मतदाता पर्ची - #${v.serial_no} ${v.name_hindi}`;
       document.getElementById("slipWard").innerText = `वार्ड ${v.ward_number}`;
@@ -1240,39 +2194,57 @@
       document.getElementById("slipMeta").innerText = `मकान: ${v.house_number} | आयु: ${v.age} वर्ष | लिंग: ${v.gender_hindi}`;
 
       // Update Karyakarta Toggle Buttons
-      const btnVoted = document.getElementById("btnMarkVoted");
-      const btnSupporter = document.getElementById("btnMarkSupporter");
-      btnVoted.className = `toggle-btn ${v.voter_status === 'voted' ? 'active-voted' : ''}`;
-      btnSupporter.className = `toggle-btn ${v.voter_status === 'supporter' ? 'active-supporter' : ''}`;
+      updateModalButtons();
 
       // Fetch Family Members in same house
       const familyBox = document.getElementById("familyChipsContainer");
-      familyBox.innerHTML = '<span style="font-size: 11px; color:#A0AEC0;">लोड हो रहा है...</span>';
+      if (familyBox) {
+        familyBox.innerHTML = '<span style="font-size: 11px; color:#A0AEC0;">लोड हो रहा है...</span>';
 
-      let family = [];
-      if (window._staticVoters && window._staticVoters.length > 0) {
-        family = window._staticVoters.filter(x => x.ward_number === v.ward_number && String(x.house_number) === String(v.house_number) && x.id !== v.id);
-      } else if (window.pywebview && window.pywebview.api) {
-        family = await window.pywebview.api.get_family(v.ward_number, v.house_number, v.id);
-      } else {
-        family = cachedVoters.filter(x => x.ward_number === v.ward_number && String(x.house_number) === String(v.house_number) && x.id !== v.id);
+        let family = [];
+        if (window._staticVoters && window._staticVoters.length > 0) {
+          family = window._staticVoters.filter(x => x.ward_number === v.ward_number && String(x.house_number) === String(v.house_number) && x.id !== v.id);
+        } else if (window.pywebview && window.pywebview.api) {
+          family = await window.pywebview.api.get_family(v.ward_number, v.house_number, v.id);
+        } else {
+          family = cachedVoters.filter(x => x.ward_number === v.ward_number && String(x.house_number) === String(v.house_number) && x.id !== v.id);
+        }
+
+        if (family.length > 0) {
+          familyBox.innerHTML = family.map(f => {
+            let tags = '';
+            if (f.is_voted) tags += ' • <b style="color:var(--green)">✔ वोटेड</b>';
+            if (f.is_supporter) tags += ' • <b style="color:#1976D2">⭐ समर्थक</b>';
+
+            return `
+              <div class="family-chip" onclick="openVoterSlip(${f.id})">
+                <div class="family-chip-left">
+                  <span class="family-chip-name">
+                    <span style="color: var(--primary);">#${f.serial_no}</span> ${f.name_hindi}
+                  </span>
+                  <span class="family-chip-sub">
+                    ${f.relative_type || 'संबंध'}: ${f.relative_hindi || '-'} | आयु: ${f.age || '-'} वर्ष | ${f.gender_hindi || '-'}
+                    ${tags}
+                  </span>
+                </div>
+                <div class="family-chip-btn">
+                  पर्ची खोलें ➔
+                </div>
+              </div>
+            `;
+          }).join("");
+        } else {
+          familyBox.innerHTML = '<div style="font-size: 11.5px; color:#64748B; padding: 6px 0;">इस मकान में अन्य कोई मतदाता दर्ज नहीं है।</div>';
+        }
       }
 
-      if (family.length > 0) {
-        familyBox.innerHTML = family.map(f => `
-          <div class="family-chip" onclick="openVoterSlip(${f.id})">
-            #${f.serial_no} ${f.name_hindi} (${f.relative_hindi})
-          </div>
-        `).join("");
-      } else {
-        familyBox.innerHTML = '<span style="font-size: 11px; color:#64748B;">इस मकान में अन्य कोई मतदाता दर्ज नहीं है।</span>';
-      }
-
-      document.getElementById("voterSlipModal").style.display = 'flex';
+      const modal = document.getElementById("voterSlipModal");
+      if (modal) modal.style.display = 'flex';
     }
 
     function closeSlipModal() {
-      document.getElementById("voterSlipModal").style.display = 'none';
+      const modal = document.getElementById("voterSlipModal");
+      if (modal) modal.style.display = 'none';
       currentVoter = null;
     }
 
@@ -1280,21 +2252,176 @@
       if (e.target.id === 'voterSlipModal') closeSlipModal();
     }
 
-    async function toggleStatus(statusName) {
+    // Toggle Voted (Independent Flag)
+    function toggleVoted() {
       if (!currentVoter) return;
-      const newStatus = (currentVoter.voter_status === statusName) ? 'unmarked' : statusName;
-      currentVoter.voter_status = newStatus;
+      currentVoter.is_voted = !currentVoter.is_voted;
 
-      if (window.pywebview && window.pywebview.api) {
-        await window.pywebview.api.update_status(currentVoter.id, newStatus);
+      if (window._staticVoters) {
+        const target = window._staticVoters.find(x => x.id === currentVoter.id);
+        if (target) target.is_voted = currentVoter.is_voted;
       }
 
-      // Update UI button
-      document.getElementById("btnMarkVoted").className = `toggle-btn ${newStatus === 'voted' ? 'active-voted' : ''}`;
-      document.getElementById("btnMarkSupporter").className = `toggle-btn ${newStatus === 'supporter' ? 'active-supporter' : ''}`;
+      saveStatus(currentVoter.id, {
+        voted: currentVoter.is_voted,
+        supporter: currentVoter.is_supporter
+      });
 
-      // Refresh list in background
+      updateModalButtons();
+      updateLiveStatsAndCounters();
       loadVoters();
+    }
+
+    // Toggle Supporter (Independent Flag)
+    function toggleSupporter() {
+      if (!currentVoter) return;
+      currentVoter.is_supporter = !currentVoter.is_supporter;
+
+      if (window._staticVoters) {
+        const target = window._staticVoters.find(x => x.id === currentVoter.id);
+        if (target) target.is_supporter = currentVoter.is_supporter;
+      }
+
+      saveStatus(currentVoter.id, {
+        voted: currentVoter.is_voted,
+        supporter: currentVoter.is_supporter
+      });
+
+      updateModalButtons();
+      updateLiveStatsAndCounters();
+      loadVoters();
+    }
+
+    // Undo / Clear Both Flags
+    function undoStatus() {
+      if (!currentVoter) return;
+      currentVoter.is_voted = false;
+      currentVoter.is_supporter = false;
+
+      if (window._staticVoters) {
+        const target = window._staticVoters.find(x => x.id === currentVoter.id);
+        if (target) {
+          target.is_voted = false;
+          target.is_supporter = false;
+        }
+      }
+
+      saveStatus(currentVoter.id, { voted: false, supporter: false });
+
+      updateModalButtons();
+      updateLiveStatsAndCounters();
+      loadVoters();
+    }
+
+    function updateModalButtons() {
+      if (!currentVoter) return;
+      const btnVoted = document.getElementById("btnMarkVoted");
+      const btnSupporter = document.getElementById("btnMarkSupporter");
+      const btnUndo = document.getElementById("btnUndoStatus");
+
+      if (btnVoted) {
+        btnVoted.className = `toggle-btn ${currentVoter.is_voted ? 'active-voted' : ''}`;
+        btnVoted.innerHTML = currentVoter.is_voted ? '✔ मतदान किया (सक्रिय)' : '✔ मतदान किया';
+      }
+      if (btnSupporter) {
+        btnSupporter.className = `toggle-btn ${currentVoter.is_supporter ? 'active-supporter' : ''}`;
+        btnSupporter.innerHTML = currentVoter.is_supporter ? '⭐ समर्थक (सक्रिय)' : '⭐ समर्थक';
+      }
+      if (btnUndo) {
+        btnUndo.style.display = (currentVoter.is_voted || currentVoter.is_supporter) ? 'inline-block' : 'none';
+      }
+    }
+
+    // Real-Time Analytics & Dashboard Calculator
+    function updateLiveStatsAndCounters() {
+      if (!window._staticVoters || window._staticVoters.length === 0) return;
+
+      const total = window._staticVoters.length;
+      const polled = window._staticVoters.filter(v => v.is_voted).length;
+      const supporters = window._staticVoters.filter(v => v.is_supporter).length;
+      const suppPolled = window._staticVoters.filter(v => v.is_supporter && v.is_voted).length;
+      const suppPending = window._staticVoters.filter(v => v.is_supporter && !v.is_voted).length;
+      const pending = total - polled;
+      const polledPct = ((polled / total) * 100).toFixed(1);
+
+      // 1. Home Screen Counters
+      const elHomePolled = document.getElementById("homePolledCount");
+      const elHomeSupporter = document.getElementById("homeSupporterCount");
+      if (elHomePolled) elHomePolled.innerText = polled;
+      if (elHomeSupporter) elHomeSupporter.innerText = supporters;
+
+      // 2. Search Tab Badges
+      const elBadgeSupporter = document.getElementById("badgeSupporterCount");
+      const elBadgeSuppPending = document.getElementById("badgeSuppPendingCount");
+      const elBadgeVoted = document.getElementById("badgeVotedCount");
+      const elBadgePending = document.getElementById("badgePendingCount");
+      if (elBadgeSupporter) elBadgeSupporter.innerText = supporters;
+      if (elBadgeSuppPending) elBadgeSuppPending.innerText = suppPending;
+      if (elBadgeVoted) elBadgeVoted.innerText = polled;
+      if (elBadgePending) elBadgePending.innerText = pending;
+
+      // 3. Stats Tab Cards
+      const elStatsPolled = document.getElementById("statsTotalPolled");
+      const elStatsSupporters = document.getElementById("statsTotalSupporters");
+      const elStatsPending = document.getElementById("statsTotalPending");
+      const elStatsSuppPolled = document.getElementById("statsSupportersPolled");
+      const elStatsSuppPending = document.getElementById("statsSupportersPending");
+      const elStatsPolledPct = document.getElementById("statsPolledPct");
+      const elStatsProgressBar = document.getElementById("statsProgressBar");
+
+      if (elStatsPolled) elStatsPolled.innerText = polled;
+      if (elStatsSupporters) elStatsSupporters.innerText = supporters;
+      if (elStatsPending) elStatsPending.innerText = pending;
+      if (elStatsSuppPolled) elStatsSuppPolled.innerText = `${suppPolled} वोटेड`;
+      if (elStatsSuppPending) elStatsSuppPending.innerText = `${suppPending} बाकी`;
+      if (elStatsPolledPct) elStatsPolledPct.innerText = `${polledPct}% पूर्ण`;
+      if (elStatsProgressBar) elStatsProgressBar.style.width = `${polledPct}%`;
+
+      // Quick Action Buttons Counts
+      const elBtnSupp = document.getElementById("btnStatSuppCount");
+      const elBtnSuppPend = document.getElementById("btnStatSuppPendingCount");
+      const elBtnVoted = document.getElementById("btnStatVotedCount");
+      const elBtnPending = document.getElementById("btnStatPendingCount");
+      if (elBtnSupp) elBtnSupp.innerText = supporters;
+      if (elBtnSuppPend) elBtnSuppPend.innerText = suppPending;
+      if (elBtnVoted) elBtnVoted.innerText = polled;
+      if (elBtnPending) elBtnPending.innerText = pending;
+
+      // 4. Ward Stats Table
+      renderStatsTable();
+    }
+
+    function renderStatsTable() {
+      const tbody = document.getElementById("wardStatsTableBody");
+      if (!tbody) return;
+
+      tbody.innerHTML = WARD_COUNTS.map(w => {
+        let wPolled = 0;
+        let wSupporters = 0;
+        if (window._staticVoters) {
+          const wardList = window._staticVoters.filter(v => v.ward_number === w.ward);
+          wPolled = wardList.filter(v => v.is_voted).length;
+          wSupporters = wardList.filter(v => v.is_supporter).length;
+        }
+        const wPending = w.count - wPolled;
+        const wPct = ((wPolled / w.count) * 100).toFixed(0);
+
+        return `
+          <tr onclick="selectWardAndSearch(${w.ward})" style="cursor: pointer;">
+            <td><b>वार्ड ${w.ward}</b></td>
+            <td><b>${w.count}</b></td>
+            <td style="color: var(--green); font-weight: bold;">${wPolled}</td>
+            <td style="color: #1976D2; font-weight: bold;">${wSupporters}</td>
+            <td style="color: #E65100;">${wPending}</td>
+            <td style="font-size: 11px;">
+              ${wPct}%
+              <div style="width: 30px; height: 5px; background: #E2E8F0; border-radius: 3px; display: inline-block; vertical-align: middle; margin-left: 2px;">
+                <div style="width: ${wPct}%; height: 100%; background: var(--green); border-radius: 3px;"></div>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join("");
     }
 
     function shareCurrentSlip() {
