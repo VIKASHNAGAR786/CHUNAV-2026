@@ -1,62 +1,262 @@
-2026-11-04 19:32:51,941 [INFO] Starting extraction for PDF: JAINAGAR-Ward No-009.pdf
-2026-11-04 19:32:51,988 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
-2026-11-04 19:32:52,079 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
-2026-11-04 19:32:52,080 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '9'
-2026-11-04 19:32:52,247 [INFO] Page 1: 24 cards detected.
-2026-11-04 19:33:17,590 [INFO] Page 2: 24 cards detected.
-2026-11-04 19:36:43,263 [INFO] Starting extraction for PDF: JAINAGAR-Ward No-009.pdf
-2026-11-04 19:36:43,289 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
-2026-11-04 19:36:43,380 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
-2026-11-04 19:36:43,380 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '9'
-2026-11-04 19:36:43,536 [INFO] Page 1: 0 cards detected.
-2026-11-04 19:36:43,658 [INFO] Page 2: 0 cards detected.
-2026-11-04 19:36:43,838 [INFO] Page 3: 24 cards detected.
-2026-11-04 19:36:59,589 [INFO] Page 4: 27 cards detected.
-2026-11-04 19:37:17,639 [INFO] Page 5: 27 cards detected.
-2026-11-04 19:37:35,884 [INFO] Page 6: 27 cards detected.
-2026-11-04 19:37:53,615 [INFO] Page 7: 23 cards detected.
-2026-11-04 19:38:09,206 [INFO] Page 8: 27 cards detected.
-2026-11-04 19:38:27,048 [INFO] Page 9: 27 cards detected.
-2026-11-04 19:38:45,365 [INFO] Page 10: 27 cards detected.
-2026-11-04 19:39:03,640 [INFO] Page 11: 27 cards detected.
-2026-11-04 19:39:21,455 [INFO] Page 12: 27 cards detected.
-2026-11-04 19:39:39,636 [INFO] Page 13: 24 cards detected.
-2026-11-04 19:39:55,974 [INFO] Page 14: 27 cards detected.
-2026-11-04 19:40:14,114 [INFO] Page 15: 27 cards detected.
-2026-11-04 19:40:32,000 [INFO] Page 16: 27 cards detected.
-2026-11-04 19:40:49,388 [INFO] Page 17: 27 cards detected.
-2026-11-04 19:41:06,753 [INFO] Page 18: 27 cards detected.
-2026-11-04 19:41:24,105 [INFO] Page 19: 19 cards detected.
-2026-11-04 19:41:36,175 [INFO] Page 20: 17 cards detected.
-2026-11-04 19:41:47,025 [INFO] Page 21: 4 cards detected.
-2026-11-04 19:41:49,694 [INFO] Page 22: 0 cards detected.
-2026-11-04 19:41:49,698 [INFO] Validating extracted records and identifying review items...
-2026-11-04 19:41:50,643 [INFO] Processing successfully completed. Exported to: .\output\Voter_List_Extracted.xlsx
-2026-11-04 19:45:06,190 [INFO] Starting extraction for PDF: JAINAGAR-Ward No-009.pdf
-2026-11-04 19:45:06,205 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
-2026-11-04 19:45:06,295 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
-2026-11-04 19:45:06,295 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '9'
-2026-11-04 19:45:06,450 [INFO] Page 1: 0 cards detected.
-2026-11-04 19:45:06,576 [INFO] Page 2: 0 cards detected.
-2026-11-04 19:45:06,752 [INFO] Page 3: 24 cards detected.
-2026-11-04 19:45:22,024 [INFO] Page 4: 27 cards detected.
-2026-11-04 19:45:39,529 [INFO] Page 5: 27 cards detected.
-2026-11-04 19:45:57,080 [INFO] Page 6: 27 cards detected.
-2026-11-04 19:46:14,718 [INFO] Page 7: 23 cards detected.
-2026-11-04 19:46:29,986 [INFO] Page 8: 27 cards detected.
-2026-11-04 19:46:47,877 [INFO] Page 9: 27 cards detected.
-2026-11-04 19:47:05,633 [INFO] Page 10: 27 cards detected.
-2026-11-04 19:47:23,350 [INFO] Page 11: 27 cards detected.
-2026-11-04 19:47:40,930 [INFO] Page 12: 27 cards detected.
-2026-11-04 19:47:58,682 [INFO] Page 13: 24 cards detected.
-2026-11-04 19:48:14,632 [INFO] Page 14: 27 cards detected.
-2026-11-04 19:48:32,293 [INFO] Page 15: 27 cards detected.
-2026-11-04 19:48:49,993 [INFO] Page 16: 27 cards detected.
-2026-11-04 19:49:07,448 [INFO] Page 17: 27 cards detected.
-2026-11-04 19:49:25,332 [INFO] Page 18: 27 cards detected.
-2026-11-04 19:49:43,161 [INFO] Page 19: 19 cards detected.
-2026-11-04 19:49:55,373 [INFO] Page 20: 17 cards detected.
-2026-11-04 19:50:06,215 [INFO] Page 21: 4 cards detected.
-2026-11-04 19:50:08,964 [INFO] Page 22: 0 cards detected.
-2026-11-04 19:50:08,971 [INFO] Validating extracted records and identifying review items...
-2026-11-04 19:50:09,797 [INFO] Processing successfully completed. Exported to: .\output\Voter_List_Extracted.xlsx
+2026-11-04 20:24:57,917 [INFO] Starting extraction for PDF: VOTER LISTS\JAINAGAR-Ward No-009.pdf
+2026-11-04 20:24:57,932 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
+2026-11-04 20:24:57,995 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:24:57,995 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '9'
+2026-11-04 20:24:58,162 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:24:58,294 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:24:58,475 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:25:02,809 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:25:08,405 [INFO] Page 5: 27 cards detected.
+2026-11-04 20:25:14,035 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:25:20,001 [INFO] Page 7: 23 cards detected.
+2026-11-04 20:25:25,010 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:25:30,323 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:25:35,872 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:25:41,361 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:25:46,619 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:25:52,234 [INFO] Page 13: 24 cards detected.
+2026-11-04 20:25:57,099 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:26:02,487 [INFO] Page 15: 27 cards detected.
+2026-11-04 20:26:08,048 [INFO] Page 16: 27 cards detected.
+2026-11-04 20:26:14,051 [INFO] Page 17: 27 cards detected.
+2026-11-04 20:26:19,934 [INFO] Page 18: 27 cards detected.
+2026-11-04 20:26:25,225 [INFO] Page 19: 19 cards detected.
+2026-11-04 20:26:28,788 [INFO] Page 20: 17 cards detected.
+2026-11-04 20:26:32,288 [INFO] Page 21: 4 cards detected.
+2026-11-04 20:26:33,260 [INFO] Page 22: 0 cards detected.
+2026-11-04 20:26:33,267 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:26:34,124 [INFO] Processing successfully completed. Exported to: .\output\JAINAGAR-Ward No-009.xlsx
+2026-11-04 20:27:20,988 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-001.pdf
+2026-11-04 20:27:21,007 [INFO] PDF opened successfully. Total pages: 17. Text layer: True
+2026-11-04 20:27:21,048 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:27:21,048 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '1'
+2026-11-04 20:27:21,197 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:27:21,323 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:27:21,506 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:27:25,922 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:27:31,250 [INFO] Page 5: 24 cards detected.
+2026-11-04 20:27:36,242 [INFO] Page 6: 22 cards detected.
+2026-11-04 20:27:40,425 [INFO] Page 7: 27 cards detected.
+2026-11-04 20:27:45,774 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:27:51,386 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:27:56,780 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:28:02,432 [INFO] Page 11: 23 cards detected.
+2026-11-04 20:28:07,350 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:28:12,908 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:28:18,747 [INFO] Page 14: 24 cards detected.
+2026-11-04 20:28:23,829 [INFO] Page 15: 15 cards detected.
+2026-11-04 20:28:26,629 [INFO] Page 16: 5 cards detected.
+2026-11-04 20:28:27,707 [INFO] Page 17: 0 cards detected.
+2026-11-04 20:28:27,710 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:28:28,360 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-001.xlsx
+2026-11-04 20:28:28,368 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-002.pdf
+2026-11-04 20:28:28,384 [INFO] PDF opened successfully. Total pages: 17. Text layer: True
+2026-11-04 20:28:28,418 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:28:28,418 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '2'
+2026-11-04 20:28:28,561 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:28:28,702 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:28:28,912 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:28:33,286 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:28:38,088 [INFO] Page 5: 27 cards detected.
+2026-11-04 20:28:42,819 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:28:47,838 [INFO] Page 7: 27 cards detected.
+2026-11-04 20:28:53,848 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:28:58,864 [INFO] Page 9: 25 cards detected.
+2026-11-04 20:29:03,438 [INFO] Page 10: 24 cards detected.
+2026-11-04 20:29:07,642 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:29:12,911 [INFO] Page 12: 23 cards detected.
+2026-11-04 20:29:17,559 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:29:22,747 [INFO] Page 14: 21 cards detected.
+2026-11-04 20:29:26,886 [INFO] Page 15: 12 cards detected.
+2026-11-04 20:29:29,089 [INFO] Page 16: 8 cards detected.
+2026-11-04 20:29:30,921 [INFO] Page 17: 0 cards detected.
+2026-11-04 20:29:30,921 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:29:31,630 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-002.xlsx
+2026-11-04 20:29:31,636 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-003.pdf
+2026-11-04 20:29:31,648 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
+2026-11-04 20:29:31,684 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:29:31,684 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '3'
+2026-11-04 20:29:31,820 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:29:31,951 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:29:32,141 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:29:36,401 [INFO] Page 4: 24 cards detected.
+2026-11-04 20:29:40,797 [INFO] Page 5: 23 cards detected.
+2026-11-04 20:29:44,971 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:29:49,904 [INFO] Page 7: 22 cards detected.
+2026-11-04 20:29:53,919 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:29:58,891 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:30:03,829 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:30:08,605 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:30:13,632 [INFO] Page 12: 23 cards detected.
+2026-11-04 20:30:17,779 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:30:23,178 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:30:28,117 [INFO] Page 15: 27 cards detected.
+2026-11-04 20:30:32,769 [INFO] Page 16: 27 cards detected.
+2026-11-04 20:30:37,369 [INFO] Page 17: 27 cards detected.
+2026-11-04 20:30:41,988 [INFO] Page 18: 27 cards detected.
+2026-11-04 20:30:46,538 [INFO] Page 19: 5 cards detected.
+2026-11-04 20:30:47,569 [INFO] Page 20: 10 cards detected.
+2026-11-04 20:30:49,463 [INFO] Page 21: 13 cards detected.
+2026-11-04 20:30:51,987 [INFO] Page 22: 0 cards detected.
+2026-11-04 20:30:51,990 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:30:52,772 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-003.xlsx
+2026-11-04 20:30:52,779 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-004.pdf
+2026-11-04 20:30:52,791 [INFO] PDF opened successfully. Total pages: 21. Text layer: True
+2026-11-04 20:30:52,829 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:30:52,829 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '4'
+2026-11-04 20:30:52,963 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:30:53,092 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:30:53,296 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:30:57,495 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:31:02,088 [INFO] Page 5: 27 cards detected.
+2026-11-04 20:31:06,669 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:31:11,343 [INFO] Page 7: 27 cards detected.
+2026-11-04 20:31:15,969 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:31:20,649 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:31:25,210 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:31:29,914 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:31:34,521 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:31:39,088 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:31:43,744 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:31:48,630 [INFO] Page 15: 24 cards detected.
+2026-11-04 20:31:52,664 [INFO] Page 16: 27 cards detected.
+2026-11-04 20:31:57,280 [INFO] Page 17: 23 cards detected.
+2026-11-04 20:32:01,241 [INFO] Page 18: 16 cards detected.
+2026-11-04 20:32:04,024 [INFO] Page 19: 18 cards detected.
+2026-11-04 20:32:07,001 [INFO] Page 20: 11 cards detected.
+2026-11-04 20:32:08,938 [INFO] Page 21: 0 cards detected.
+2026-11-04 20:32:08,941 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:32:09,826 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-004.xlsx
+2026-11-04 20:32:09,833 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-005.pdf
+2026-11-04 20:32:09,847 [INFO] PDF opened successfully. Total pages: 20. Text layer: True
+2026-11-04 20:32:09,883 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:32:09,883 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '5'
+2026-11-04 20:32:10,034 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:32:10,159 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:32:10,348 [INFO] Page 3: 23 cards detected.
+2026-11-04 20:32:14,455 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:32:19,352 [INFO] Page 5: 27 cards detected.
+2026-11-04 20:32:23,945 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:32:28,617 [INFO] Page 7: 22 cards detected.
+2026-11-04 20:32:32,345 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:32:36,979 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:32:41,659 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:32:46,349 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:32:52,520 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:32:58,113 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:33:03,675 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:33:09,154 [INFO] Page 15: 27 cards detected.
+2026-11-04 20:33:15,342 [INFO] Page 16: 27 cards detected.
+2026-11-04 20:33:21,731 [INFO] Page 17: 6 cards detected.
+2026-11-04 20:33:23,096 [INFO] Page 18: 18 cards detected.
+2026-11-04 20:33:26,832 [INFO] Page 19: 13 cards detected.
+2026-11-04 20:33:30,062 [INFO] Page 20: 0 cards detected.
+2026-11-04 20:33:30,066 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:33:30,785 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-005.xlsx
+2026-11-04 20:33:30,792 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-006.pdf
+2026-11-04 20:33:30,806 [INFO] PDF opened successfully. Total pages: 18. Text layer: True
+2026-11-04 20:33:30,842 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:33:30,842 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '6'
+2026-11-04 20:33:30,977 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:33:31,112 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:33:31,292 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:33:36,236 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:33:41,633 [INFO] Page 5: 23 cards detected.
+2026-11-04 20:33:46,169 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:33:51,736 [INFO] Page 7: 27 cards detected.
+2026-11-04 20:33:57,152 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:34:02,569 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:34:08,108 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:34:13,780 [INFO] Page 11: 24 cards detected.
+2026-11-04 20:34:18,994 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:34:24,348 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:34:29,138 [INFO] Page 14: 21 cards detected.
+2026-11-04 20:34:32,933 [INFO] Page 15: 7 cards detected.
+2026-11-04 20:34:34,588 [INFO] Page 16: 8 cards detected.
+2026-11-04 20:34:36,302 [INFO] Page 17: 11 cards detected.
+2026-11-04 20:34:38,598 [INFO] Page 18: 0 cards detected.
+2026-11-04 20:34:38,602 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:34:39,229 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-006.xlsx
+2026-11-04 20:34:39,235 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-007.pdf
+2026-11-04 20:34:39,250 [INFO] PDF opened successfully. Total pages: 21. Text layer: True
+2026-11-04 20:34:39,283 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:34:39,283 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '7'
+2026-11-04 20:34:39,429 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:34:39,562 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:34:39,759 [INFO] Page 3: 22 cards detected.
+2026-11-04 20:34:44,359 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:34:49,247 [INFO] Page 5: 22 cards detected.
+2026-11-04 20:34:53,219 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:34:58,437 [INFO] Page 7: 27 cards detected.
+2026-11-04 20:35:03,546 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:35:08,737 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:35:13,939 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:35:18,964 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:35:24,027 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:35:28,847 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:35:33,938 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:35:39,870 [INFO] Page 15: 27 cards detected.
+2026-11-04 20:35:44,826 [INFO] Page 16: 23 cards detected.
+2026-11-04 20:35:48,962 [INFO] Page 17: 19 cards detected.
+2026-11-04 20:35:52,587 [INFO] Page 18: 15 cards detected.
+2026-11-04 20:35:55,809 [INFO] Page 19: 16 cards detected.
+2026-11-04 20:35:58,783 [INFO] Page 20: 0 cards detected.
+2026-11-04 20:35:58,915 [INFO] Page 21: 0 cards detected.
+2026-11-04 20:35:58,918 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:35:59,659 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-007.xlsx
+2026-11-04 20:35:59,665 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-008.pdf
+2026-11-04 20:35:59,679 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
+2026-11-04 20:35:59,711 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:35:59,711 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '8'
+2026-11-04 20:35:59,840 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:35:59,973 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:36:00,162 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:36:05,052 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:36:10,106 [INFO] Page 5: 27 cards detected.
+2026-11-04 20:36:14,960 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:36:20,048 [INFO] Page 7: 27 cards detected.
+2026-11-04 20:36:25,864 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:36:31,208 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:36:36,646 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:36:41,870 [INFO] Page 11: 23 cards detected.
+2026-11-04 20:36:45,980 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:36:51,345 [INFO] Page 13: 27 cards detected.
+2026-11-04 20:36:56,288 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:37:01,169 [INFO] Page 15: 27 cards detected.
+2026-11-04 20:37:06,063 [INFO] Page 16: 27 cards detected.
+2026-11-04 20:37:11,160 [INFO] Page 17: 9 cards detected.
+2026-11-04 20:37:13,143 [INFO] Page 18: 18 cards detected.
+2026-11-04 20:37:16,196 [INFO] Page 19: 17 cards detected.
+2026-11-04 20:37:19,079 [INFO] Page 20: 0 cards detected.
+2026-11-04 20:37:19,221 [INFO] Page 21: 4 cards detected.
+2026-11-04 20:37:20,189 [INFO] Page 22: 0 cards detected.
+2026-11-04 20:37:20,192 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:37:20,934 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-008.xlsx
+2026-11-04 20:37:20,941 [INFO] Starting extraction for PDF: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\JAINAGAR-Ward No-009.pdf
+2026-11-04 20:37:20,970 [INFO] PDF opened successfully. Total pages: 22. Text layer: True
+2026-11-04 20:37:21,005 [INFO] Tesseract ready: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\tesseract_engine\tesseract.exe (Language: hin+eng)
+2026-11-04 20:37:21,005 [INFO] Metadata extracted - Panchayat: 'जैनगर', Ward: '9'
+2026-11-04 20:37:21,153 [INFO] Page 1: 0 cards detected.
+2026-11-04 20:37:21,275 [INFO] Page 2: 0 cards detected.
+2026-11-04 20:37:21,461 [INFO] Page 3: 24 cards detected.
+2026-11-04 20:37:25,725 [INFO] Page 4: 27 cards detected.
+2026-11-04 20:37:30,660 [INFO] Page 5: 27 cards detected.
+2026-11-04 20:37:35,449 [INFO] Page 6: 27 cards detected.
+2026-11-04 20:37:40,201 [INFO] Page 7: 23 cards detected.
+2026-11-04 20:37:44,205 [INFO] Page 8: 27 cards detected.
+2026-11-04 20:37:48,903 [INFO] Page 9: 27 cards detected.
+2026-11-04 20:37:53,746 [INFO] Page 10: 27 cards detected.
+2026-11-04 20:37:58,470 [INFO] Page 11: 27 cards detected.
+2026-11-04 20:38:03,319 [INFO] Page 12: 27 cards detected.
+2026-11-04 20:38:08,275 [INFO] Page 13: 24 cards detected.
+2026-11-04 20:38:12,577 [INFO] Page 14: 27 cards detected.
+2026-11-04 20:38:17,548 [INFO] Page 15: 27 cards detected.
+2026-11-04 20:38:23,790 [INFO] Page 16: 27 cards detected.
+2026-11-04 20:38:29,767 [INFO] Page 17: 27 cards detected.
+2026-11-04 20:38:35,822 [INFO] Page 18: 27 cards detected.
+2026-11-04 20:38:41,483 [INFO] Page 19: 19 cards detected.
+2026-11-04 20:38:45,529 [INFO] Page 20: 17 cards detected.
+2026-11-04 20:38:48,992 [INFO] Page 21: 4 cards detected.
+2026-11-04 20:38:50,036 [INFO] Page 22: 0 cards detected.
+2026-11-04 20:38:50,039 [INFO] Validating extracted records and identifying review items...
+2026-11-04 20:38:50,858 [INFO] Processing successfully completed. Exported to: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output\JAINAGAR-Ward No-009.xlsx

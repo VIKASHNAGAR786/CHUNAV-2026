@@ -1,0 +1,21 @@
+=====================================================================================
+                   ALL 9 VOTER LISTS PROCESSING SUMMARY
+=====================================================================================
+#   PDF File Name              Voters   Verified   Review   Time     Status
+-------------------------------------------------------------------------------------
+1   JAINAGAR-Ward No-001.pdf   326      234        92       67.4s    SUCCESS
+2   JAINAGAR-Ward No-002.pdf   326      228        98       63.3s    SUCCESS
+3   JAINAGAR-Ward No-003.pdf   441      332        109      81.1s    SUCCESS
+4   JAINAGAR-Ward No-004.pdf   440      338        102      77.1s    SUCCESS
+5   JAINAGAR-Ward No-005.pdf   406      314        92       81.0s    SUCCESS
+6   JAINAGAR-Ward No-006.pdf   334      234        100      68.4s    SUCCESS
+7   JAINAGAR-Ward No-007.pdf   414      292        122      80.4s    SUCCESS
+8   JAINAGAR-Ward No-008.pdf   419      341        78       81.3s    SUCCESS
+9   JAINAGAR-Ward No-009.pdf   462      382        80       89.9s    SUCCESS
+-------------------------------------------------------------------------------------
+TOTAL ALL 9 WARDS                3568     2695       873      689.9s
+=====================================================================================
+Total Execution Time: 689.9s (~11.5 minutes)
+Primary Output Directory:     C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\output
+VOTER LISTS Output Directory: C:\Users\VIKAS NAGAR\Desktop\CHUNAV 2026\VOTER LISTS\EXCEL_OUTPUT
+=====================================================================================
