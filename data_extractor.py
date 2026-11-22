@@ -15,9 +15,9 @@ def clean_text_field(val: str) -> str:
     # Strip photo labels in English and Hindi
     val = re.sub(r'(?:Photo\s*is\s*Available|Photo\s*Not\s*Available|Photo\s*Available|Photo|Available|Ph\b|Avail\b)', '', val, flags=re.I)
     val = re.sub(r'(?:फोटो\s*उपलब्ध\s*है|फोटो\s*उपलब्ध\s*नहीं\s*है|फोटो\s*उपलब्ध|फोटो)', '', val)
-    # Strip quotes, punctuation and symbols
-    val = re.sub(r'["\'“”’`*_~|:;=+\\/\^$#@!.\-–—]+', ' ', val)
-    # Strip trailing 1-4 letter English words (like re, ren, is, ph)
+    # Strip quotes, punctuation, brackets and symbols (< > ( ) [ ] { } etc.)
+    val = re.sub(r'["\'“”’`*_~|:;=+\\\/\^$#@!.\-–—<>()\[\]{}]+', ' ', val)
+    # Strip trailing 1-4 letter English words (like re, ren, is, ph, yp, fy)
     val = re.sub(r'\s+[a-zA-Z]{1,4}\s*$', '', val)
     # Strip trailing lone particles like 'कि', 'का', 'के', 'सी', 'हि'
     val = re.sub(r'\s+[ककसपह][िाेी]\s*$', '', val)
@@ -101,19 +101,74 @@ def normalize_name(name: str) -> str:
     """Correct known Devanagari OCR conjunct distortions in election roll names."""
     if not name:
         return ""
-    # Strip residual OCR artifacts
-    name = re.sub(r'[\'\"“”’`*_~|:;=+\\\/\^$#@!.\-–—]+', ' ', name)
-    name = re.sub(r'\s+[a-zA-Z]{1,4}\s*$', '', name)
-    name = re.sub(r'\s+', ' ', name).strip()
+    
+    # 1. Clean unicode conjuncts & ZWJ / ZWNJ
+    name = re.sub(r'्[\u200c\u200d]?्+', '्', name)
+    name = re.sub(r'[\u200c\u200d]', '', name)
 
-    # Pradhyumna Nagar specific OCR distortion: 'प्रद्मुस्न नागर' or 'TEA नागर' or 'प्रदयुम्न'
+    # 2. Strip residual OCR artifacts, brackets, quotes
+    name = re.sub(r'[\'\"“”’`*_~|:;=+\\\/\^$#@!.\-–—<>()\[\]{}]+', ' ', name)
+    
+    # 3. Strip English letters & photo labels (Hindi names never contain English characters)
+    name = re.sub(r'\bका\s+(?:ATA|ATTA|नाम)\b', '', name, flags=re.I)
+    name = re.sub(r'^(?:का|की|के)\s+', '', name)
+    name = re.sub(r'[a-zA-Z]+', '', name)
+    
+    # 4. Strip stray digits (0-9 and Devanagari ०-९)
+    name = re.sub(r'[0-9\u0966-\u096F]+', '', name)
+    
+    # 5. Fix colon collision damaged prefixes
+    name = re.sub(r'(?:^|\s)(?:श्|श|शब|्)+जरंग(?:\s*लाल|ू)?', ' बजरंगलाल', name)
+    name = re.sub(r'(?:^|\s)जरंगलाल\b', 'बजरंगलाल', name)
+    name = re.sub(r'(?:^|\s)(?:श्|श)+द्री\s*प्रसाद', ' बद्री प्रसाद', name)
+    name = re.sub(r'(?:^|\s)थादव\s*कुमार', ' यादव कुमार', name)
+    name = re.sub(r'(?:^|\s)भोहनलाल', ' मोहनलाल', name)
+    name = re.sub(r'(?:^|\s)क़ान्ता\s*प्रसाद', ' कान्ता प्रसाद', name)
+    
+    # 6. Fix doubled consonant prefixes caused by colon collision
+    doubled_map = [
+        (r'\bननरे[न्\u200c\u200d]*[्]?द्र', 'नरेन्द्र'),
+        (r'\bननररेंद्र', 'नरेन्द्र'),
+        (r'\bननरेश', 'नरेश'),
+        (r'\bननाथूलाल', 'नाथूलाल'),
+        (r'\bननन्दलाल', 'नन्दलाल'),
+        (r'\bननेंद्र', 'नरेन्द्र'),
+        (r'\bररामप्रसाद', 'रामप्रसाद'),
+        (r'\bररामचंद्र', 'रामचंद्र'),
+        (r'\bरराजेन्द्र', 'राजेन्द्र'),
+        (r'\bरराजेश', 'राजेश'),
+        (r'\bरराकेश', 'राकेश'),
+        (r'\bररामेश्वर', 'रामेश्वर'),
+        (r'\bककालू', 'कालू'),
+        (r'\bगगिरधारी', 'गिरधारी'),
+        (r'\bगगांबिशन', 'गोपीकिशन'),
+    ]
+    for pat, rep in doubled_map:
+        name = re.sub(pat, rep, name)
+
+    # 7. Specific known distortions
     if re.search(r'(?:प्रद्मुस्न|TEA\s*ANTE|TEA)\s*(?:नागर)?', name, re.I) or name.strip() in ('प्रद्मुस्न', 'TEA'):
         return "प्रद्युम्न नागर"
     if 'प्रद्मुस्न' in name:
         name = name.replace('प्रद्मुस्न', 'प्रद्युम्न')
-    # Father Rajendra Nagar distortion: 'ररजेंद्र नागर' -> 'राजेंद्र नागर'
     if 'ररजेंद्र' in name:
         name = name.replace('ररजेंद्र', 'राजेंद्र')
+    if 'शातीबाई' in name:
+        name = name.replace('शातीबाई', 'शांतिबाई')
+    if 'हइंसराज' in name:
+        name = name.replace('हइंसराज', 'हंसराज')
+
+    # 8. Standardize common conjuncts
+    name = re.sub(r'\bनरे[न्\u200c\u200d]*[्]?द्र\b', 'नरेन्द्र', name)
+    name = re.sub(r'\bनरे[न्\u200c\u200d]*[्]?द्रकुमार\b', 'नरेन्द्रकुमार', name)
+    name = re.sub(r'\bसन्[न्\u200c\u200d]*[्]?तोष\b', 'संतोष', name)
+    name = re.sub(r'\bनन्[न्\u200c\u200d]*[्]?द\b', 'नन्द', name)
+
+    # 9. Strip orphaned halants and trailing noise particles
+    name = re.sub(r'(?:^|\s)्+', '', name)
+    name = re.sub(r'्+(?:\s|$)', '', name)
+    name = re.sub(r'\s+[ककसपहशबरथ][िाेी]?\s*$', '', name)
+    name = re.sub(r'\s+', ' ', name).strip()
     return name
 
 
