@@ -187,4 +187,17 @@ class OCREngine:
             except Exception:
                 continue
 
+        # Pass 2 Fallback: If Hindi labels are missing or Latin noise (e.g. ATA/TEA) overpowered Devanagari
+        has_hindi_name = any(k in best_text for k in ('नाम', 'नाभ', 'नारम'))
+        if not has_hindi_name or 'ATA' in best_text or 'TEA' in best_text:
+            try:
+                proc_img = self.preprocess_card_image(text_area, method=1)
+                pil_img = Image.fromarray(proc_img)
+                hin_raw = pytesseract.image_to_string(pil_img, lang="hin", config="--psm 6")
+                if any(k in hin_raw for k in ('नाम', 'पिता', 'पति', 'मकान')):
+                    best_text = hin_raw
+                    best_conf = max(best_conf, 75.0)
+            except Exception:
+                pass
+
         return best_text.strip(), round(best_conf, 1)

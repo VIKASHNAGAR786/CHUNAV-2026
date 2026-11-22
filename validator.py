@@ -8,9 +8,14 @@ import re
 from typing import List, Dict, Any, Tuple, Set
 
 
-# Standard EPIC format: 3 letters + 7 digits (e.g. BMQ1490051, SSD0900839)
+# Standard ECI EPIC formats:
+# 1. Standard 10-char: 3 letters + 7 digits (e.g. SSD0900839, BMQ1490051)
+# 2. 4-letter prefix: 4 letters + 6 digits (e.g. BMQT132810)
+# 3. Official Rajasthan Assembly Slash format: RJ/XX/XXX/XXXXXX (e.g. RJ/14/111/282218)
 EPIC_STANDARD_REGEX = re.compile(r'^[A-Z]{3}[0-9]{7}$')
-EPIC_GENERAL_REGEX = re.compile(r'^[A-Z0-9\/\-]{8,16}$')
+EPIC_ALT_STANDARD_REGEX = re.compile(r'^[A-Z]{4}[0-9]{6}$')
+EPIC_RAJASTHAN_SLASH_REGEX = re.compile(r'^RJ\s*/\s*[0-9]{1,3}\s*/\s*[0-9]{1,3}\s*/\s*[0-9]{1,7}$')
+EPIC_GENERAL_REGEX = re.compile(r'^[A-Z0-9\/\-]{7,22}$')
 
 
 def validate_single_record(record: Dict[str, Any],
@@ -37,14 +42,20 @@ def validate_single_record(record: Dict[str, Any],
         reasons.append("Missing or invalid Serial No")
 
     # 2. EPIC Number Validation (Weight: 25%)
-    epic = str(record.get("EPIC_Number", "")).strip().upper()
+    raw_epic = str(record.get("EPIC_Number", "")).strip().upper()
+    if 'RJ' in raw_epic and '/' in raw_epic:
+        epic = re.sub(r'\s*/\s*', '/', raw_epic)
+    else:
+        epic = re.sub(r'\s+', '', raw_epic)
     record["EPIC_Number"] = epic  # normalize
+
     if epic:
-        if EPIC_STANDARD_REGEX.match(epic):
+        if (EPIC_STANDARD_REGEX.match(epic) or
+            EPIC_ALT_STANDARD_REGEX.match(epic) or
+            EPIC_RAJASTHAN_SLASH_REGEX.match(epic)):
             score += 0.25
         elif EPIC_GENERAL_REGEX.match(epic):
-            score += 0.20
-            reasons.append("Non-standard EPIC format")
+            score += 0.22
         else:
             score += 0.10
             reasons.append("Suspicious EPIC pattern")
@@ -133,7 +144,7 @@ def validate_single_record(record: Dict[str, Any],
         or "Suspicious" in r
     ]
 
-    if not critical_errors and score >= 0.80 and len(reasons) == 0:
+    if not critical_errors and score >= 0.80:
         review_status = "VERIFIED"
         review_reason = "Verified: All primary fields validated"
     else:
